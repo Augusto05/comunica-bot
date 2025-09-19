@@ -48,9 +48,7 @@ Relatórios em `.xlsx` armazenados em `relatorios/`, contendo: Nome do membro; S
 
 ## 📁 Estrutura sugerida do projeto
     comunicabot/
-    ├── bot.py
-    ├── views.py
-    ├── utils.py
+    ├── comunicabot.py
     ├── config.json
     ├── relatorios/
     ├── .env
