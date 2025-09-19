@@ -237,7 +237,7 @@ class NovoComunicadoModal(discord.ui.Modal, title="📝 Criar Comunicado"):
         self.conteudo = discord.ui.TextInput(label="Conteúdo", style=discord.TextStyle.long, placeholder="Escreva aqui o comunicado completo...", required=True)
         self.add_item(self.titulo)
         self.add_item(self.conteudo)
-        self.anexos = []  # Lista de anexos, será preenchida pelo comando
+        self.anexos = []  # Lista de anexos
 
     async def on_submit(self, interaction: discord.Interaction):
         global titulo_ultimo_comunicado, arquivo_ultimo_relatorio, ultima_msg_comunicado_id
@@ -295,9 +295,6 @@ async def apagar_comunicado(interaction: discord.Interaction):
         await interaction.response.send_message("✅ Comunicado apagado com sucesso!", ephemeral=True)
     except Exception as e:
         await interaction.response.send_message(f"❌ Erro ao apagar comunicado: {e}", ephemeral=True)
-
-# Remover o comando !relatorio
-# Restaurar o comando de barra /relatorio
 
 @bot.tree.command(name="relatorio", description="Enviar o relatório atualizado do último comunicado")
 async def relatorio(interaction: discord.Interaction):
