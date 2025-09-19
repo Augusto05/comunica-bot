@@ -22,7 +22,7 @@ Um bot de comunicados para Discord que facilita a comunicação oficial em servi
 5. Em **OAuth2 ▶ URL Generator**, marque `bot` e `applications.commands`; em Bot Permissions selecione `Send Messages`, `Attach Files`, `Mention Everyone`, `Read Message History`, `Manage Messages`, `Use Slash Commands`, `View Channels`; copie a URL gerada e abra no navegador para adicionar o bot ao seu servidor  
 
 ## 🚀 Como usar
-1. Clone o repositório: `git clone https://github.com/seu-usuario/comunicabot.git && cd comunicabot`  
+1. Clone o repositório: `git clone https://github.com/Augusto05/comunicabot.git && cd comunicabot`  
 2. Instale as dependências: `pip install -r requirements.txt`  
 3. Configure o `.env` na raiz com: `DISCORD_TOKEN=seu_token_do_bot`, `CANAL_ID=id_do_canal_de_comunicados`, `CANAL_COMANDOS_ID=id_do_canal_de_comandos`  
 4. Configure os cargos permitidos em `config.json`: `{"roles_allowed":["RH","CEO","Head Financeiro","Planejamento","Qualidade","Supervisão"]}`  
