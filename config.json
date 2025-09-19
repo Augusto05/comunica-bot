@@ -1,0 +1,10 @@
+{
+  "roles_allowed": [
+    "RH",
+    "CEO",
+    "Head Financeiro",
+    "Planejamento",
+    "Qualidade",
+    "Supervisão"
+  ]
+}

@@ -16,6 +16,16 @@ TOKEN = os.getenv("DISCORD_TOKEN")
 CANAL_ID = int(os.getenv("CANAL_ID"))
 CANAL_COMANDOS_ID = int(os.getenv("CANAL_COMANDOS_ID"))
 
+CONFIG_PATH = "config.json"
+if not os.path.exists(CONFIG_PATH):
+    raise FileNotFoundError(f"{CONFIG_PATH} não encontrado. Crie-o a partir do exemplo.")
+
+with open(CONFIG_PATH, encoding="utf-8") as f:
+    config = json.load(f)
+
+# Extrai cargos permitidos
+CARGOS_PERMITIDOS = config.get("roles_allowed", [])
+
 
 # Variáveis globais para controle do último comunicado
 titulo_ultimo_comunicado = None
@@ -193,15 +203,6 @@ async def on_ready():
             bot.add_view(ComunicadoViewPersistente(titulo))
             print(f"[DEBUG] View persistente registrada para comunicado: {titulo}")
     await bot.tree.sync()
-
-CARGOS_PERMITIDOS = [
-    "RH",
-    "CEO",
-    "Head Financeiro",
-    "Planejamento",
-    "Qualidade",
-    "Supervisão"
-]
 
 @bot.tree.command(name="comunicado", description="Enviar um comunicado oficial")
 @app_commands.describe(
