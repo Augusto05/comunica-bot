@@ -1,4 +1,4 @@
-# 🤖 ComunicaBot
+# ComunicaBot - Sistema completo de comunicados no Discord
 
 Um bot de comunicados para Discord que facilita a comunicação oficial em servidores. Com ele, você pode enviar mensagens com anexos, notificar todos os membros com prioridade, solicitar confirmação de leitura e gerar relatórios em Excel com o status de visualização.
 
